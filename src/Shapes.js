@@ -24,7 +24,7 @@ export function Shapes({ isHover, isPress, mouseX, mouseY }) {
           animate={isHover ? "hover" : "rest"}
           dispose={null}
           variants={{
-            hover: { z: isPress ? -0.9 : 0 }
+            hover: { z: isPress ? -0.9 : 0 },
           }}
         >
           <Sphere />
@@ -40,12 +40,14 @@ export function Shapes({ isHover, isPress, mouseX, mouseY }) {
 export function Lights() {
   return (
     <>
-      <spotLight color="#61dafb" position={[-10, -10, -10]} intensity={0.2} />
-      <spotLight color="#61dafb" position={[-10, 0, 15]} intensity={0.8} />
-      <spotLight color="#61dafb" position={[-5, 20, 2]} intensity={0.5} />
-      <spotLight color="#f2056f" position={[15, 10, -2]} intensity={2} />
-      <spotLight color="#f2056f" position={[15, 10, 5]} intensity={1} />
-      <spotLight color="#b107db" position={[5, -10, 5]} intensity={0.8} />
+      <spotLight color="#f44363" position={[-10, -10, -10]} intensity={0.2} />
+      <spotLight color="#f44363" position={[-10, 0, 15]} intensity={0.8} />
+      <spotLight color="#f44363" position={[-5, 20, 2]} intensity={0.5} />
+
+      <spotLight color="#1c1c1c" position={[15, 10, -2]} intensity={2} />
+      <spotLight color="#1c1c1c" position={[15, 10, 5]} intensity={1} />
+
+      <spotLight color="#fafafa" position={[5, -10, 5]} intensity={0.8} />
     </>
   );
 }
@@ -69,8 +71,8 @@ export function Cone() {
           z: 1.1,
           x: -1.5,
           rotateX: -0.2,
-          rotateZ: 0.4
-        }
+          rotateZ: 0.4,
+        },
       }}
     >
       <coneGeometry args={[0.3, 0.6, 20]} />
@@ -88,8 +90,8 @@ export function Torus() {
         hover: {
           y: 0.5,
           z: 2,
-          rotateY: -0.2
-        }
+          rotateY: -0.2,
+        },
       }}
     >
       <torusGeometry args={[0.2, 0.1, 10, 50]} />
@@ -108,8 +110,8 @@ export function Icosahedron() {
           x: 1.8,
           z: 0.6,
           y: 0.6,
-          rotateZ: -0.5
-        }
+          rotateZ: -0.5,
+        },
       }}
     >
       <icosahedronGeometry args={[0.7, 0]} />
@@ -119,7 +121,7 @@ export function Icosahedron() {
 }
 
 export function Material() {
-  return <meshPhongMaterial color="#fff" specular="#61dafb" shininess={10} />;
+  return <meshPhongMaterial color="#fff" specular="#edacac" shininess={10} />;
 }
 
 // Adapted from https://github.com/pmndrs/drei/blob/master/src/core/PerspectiveCamera.tsx

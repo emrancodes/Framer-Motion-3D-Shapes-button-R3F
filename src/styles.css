@@ -3,25 +3,28 @@ html {
   overflow: hidden;
 }
 
+body {
+  background: transparent !important;
+}
+html {
+  background: transparent !important;
+}
+
 button {
-  --purple: #db07d1;
-  --pink: #f2056f;
-  --blue: #61dafb;
+  --purple: #1c1c1c; /* Deeper candy purple */
+  --pink: #f44363; /* More vibrant strawberry pink */
+  --blue: #fafafa; /* Subtle pastel background tone that works well with red/black */
 
   appearance: none;
   border: none;
   cursor: pointer;
-  background-color: #acc7ed;
+  background-color: #edacac;
   color: #fff;
   border-radius: 60px;
   outline: none;
   margin: 0;
-  padding: 12px 25px;
   font-family: "Poppins";
-  font-size: 48px;
-  font-weight: 600;
-  line-height: 48px;
-  letter-spacing: -1px;
+  font-size: 28px;
   position: relative;
   text-align: center;
   display: flex;
@@ -38,7 +41,7 @@ button {
   background: linear-gradient(
     60deg,
     var(--blue) 0%,
-    #d6cbf6 30%,
+    #edacac 30%,
     var(--pink) 70%
   );
 }
@@ -53,7 +56,7 @@ button {
 
 .blush.pink {
   right: 20px;
-  background: var(--purple);
+  background: var(--pink);
 }
 
 .blush.blue {
@@ -78,8 +81,8 @@ button {
 }
 
 .label {
-  width: 180px;
-  padding: 20px 0;
+  width: auto;
+  padding: 10px 20px;
   transform: translateZ(0);
   font-weight: 700;
   z-index: 1;
@@ -153,7 +156,6 @@ body {
   font-family: "Inter", Arial;
   justify-content: center;
   align-items: center;
-  background: #f4f5fa;
 }
 
 /* devanagari */
